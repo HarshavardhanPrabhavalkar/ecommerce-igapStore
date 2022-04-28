@@ -6,8 +6,8 @@ class BusinessBlogs {
     id = 0;
     businessid = 0;
     categoryid = 0;
-    tittle = "";
-    urltittle = "";
+    title = "";
+    urltitle = "";
     createdoneby = "";
     author = "";
     picpath = "";
@@ -19,8 +19,8 @@ class BusinessBlogs {
         this.id = 0;
         this.businessid = 0;
         this.categoryid = 0;
-        this.tittle = "";
-        this.urltittle = "";
+        this.title = "";
+        this.urltitle = "";
         this.createdoneby = "";
         this.author = "";
         this.picpath = "";
@@ -40,16 +40,16 @@ class BusinessBlogs {
             });
         }
         if (this.id == 0) {
-          this.query = "INSERT INTO business_blogs (businessid, categoryid, tittle, urltittle, createdoneby, author,picpath,body) ";
-          this.query += "VALUES(" + this.businessid + ", '" + this.categoryid +  "', '" + this.tittle +  "', '" + this.urltittle +  "', '" + this.createdoneby +  "', '" + this.author +  "', '" + this.picpath +  "', '" + this.body +  "') ";
+          this.query = "INSERT INTO business_blogs (businessid, categoryid, title, urltitle, createdoneby, author,picpath,body) ";
+          this.query += "VALUES(" + this.businessid + ", '" + this.categoryid +  "', '" + this.title +  "', '" + this.urltitle +  "', '" + this.createdoneby +  "', '" + this.author +  "', '" + this.picpath +  "', '" + this.body +  "') ";
            
 
         }
         else {
           this.query = "UPDATE business_blogs SET  businessid = " + this.businessid + ", ";
           this.query += "categoryid = '" + this.categoryid + "', ";
-          this.query += "tittle ='" + this.tittle + "', ";
-          this.query += "urltittle ='" + this.urltittle + "', ";
+          this.query += "tittle ='" + this.title + "', ";
+          this.query += "urltittle ='" + this.urltitle + "', ";
           this.query += "createdoneby = '" + this.createdoneby + "', ";
           this.query += "author = '" + this.author + "', ";
           if(this.picpath != "")
