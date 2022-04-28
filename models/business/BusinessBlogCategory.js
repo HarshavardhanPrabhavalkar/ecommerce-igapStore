@@ -5,8 +5,8 @@ class BusinessBlogCategory {
 
     id = 0;
     businessid = 0;
-    tittle = "";
-    urltittle = "";
+    title = "";
+    urltitle = "";
     query = "";
     srno = "";
     db = new database.Database();
@@ -14,23 +14,23 @@ class BusinessBlogCategory {
     constructor() {
         this.id = 0;
         this.businessid = 0;
-        this.tittle = "";
-        this.urltittle = "";
+        this.title = "";
+        this.urltitle = "";
         this.srno = "";
         this.query = "";
       }
 
       save = () => {
         if (this.id == 0) {
-          this.query = "INSERT INTO business_blogcategories (businessid,  tittle, urltittle,srno) ";
-          this.query += "VALUES(" + this.businessid + ", '" + this.tittle +  "', '" + this.urltittle + "', '" + this.srno + "') ";
+          this.query = "INSERT INTO business_blogcategories (businessid,  title, urltitle,srno) ";
+          this.query += "VALUES(" + this.businessid + ", '" + this.title +  "', '" + this.urltitle + "', '" + this.srno + "') ";
            
 
         }
         else {
           this.query = "UPDATE business_blogcategories SET  businessid = " + this.businessid + ", ";
-          this.query += "tittle ='" + this.tittle + "', ";
-          this.query += "urltittle ='" + this.urltittle + "', ";
+          this.query += "title ='" + this.title + "', ";
+          this.query += "urltitle ='" + this.urltitle + "', ";
           this.query += "srno = '" + this.srno + "' ";
           this.query += " WHERE id =" + this.id;
         }
