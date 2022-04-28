@@ -74,21 +74,14 @@ class BusinessBlogCategory {
  
     delete=()=>{
         this.query = "SELECT * FROM business_blogcategories WHERE id = " + this.id;
-        return new Promise((resolve, reject) => {
-            this.db.query(this.query, (err, result) => {
-            this.picpath = result[0].picpath;
-            this.query = "DELETE FROM business_blogcategories WHERE id = " + this.id;        
+        return new Promise((resolve, reject) => {     
               this.db.query(this.query, (err, result) => {
                 if (err) {
                   this.db.close();        
                   reject(err);
                 }
-                fs.unlink("public/" + this.picpath, (err)=>{
-                  this.db.close();
                   resolve(result);
-                });
               });
-            });
         });
     };
 }
