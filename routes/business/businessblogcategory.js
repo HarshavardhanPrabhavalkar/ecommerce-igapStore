@@ -10,8 +10,8 @@ router.post("/save", async (req, res) => {
     let businessBCategory = new BusinessBlogCategory.BusinessBlogCategory();
     businessBCategory.id = body.data.id;
     businessBCategory.businessid = body.data.businessid;
-    businessBCategory.tittle = body.data.tittle;
-    businessBCategory.urltittle = body.data.urltittle;
+    businessBCategory.title = body.data.title;
+    businessBCategory.urltitle = body.data.urltitle;
     businessBCategory.srno = body.data.srno;
 
     businessBCategory.save().then(result =>{
